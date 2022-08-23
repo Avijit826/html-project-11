@@ -1,26 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 /* font-family: 'Open Sans', sans-serif; */
-
+:root{
+    --scale: 2rem;
+    --para-font-size:clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    --main-head-font-size:clamp(0.7rem,0.7*5vw, 5rem);
+    --sub-head-font-size:clamp(0.6rem,0.4*6vw, 3rem);
+}
 *{
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
+.btn{
+    font-size: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    font-weight: 600;
+    height: clamp(0.6rem,3.5vw, 5rem);
+    width: clamp(4rem,3*4vw, 20rem);
+    border-radius: 10px;
+}
+/* -----------------navigation---------------------- */
 nav{
-    padding: 30px;
+    padding: var(--scale);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+nav .logo{
+    width: 10%;
+}
 .menu-items{
-    margin-right: -15em;
     display: flex;
+    align-items: center;
     list-style-type: none;
-    gap:4em;
+    gap:3vw;
     font-weight: 600;
 }
 .menu-item{
-    font-size: 20px;
+    font-size: clamp(0.6rem,0.5*3vw, 1.3rem);
     color:#999;
     font-weight: 600;
 }
@@ -29,198 +45,183 @@ nav{
 }
 
 .register button{
-    font-size: 20px;
     font-weight: 900;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    height: 70px;
-    width: 245px;
-    border-radius: 10px;
     border: 2px solid  #0f95fb;
     background: -webkit-linear-gradient(#09BEF8, #0461EA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.menu{
+    display: none;
+}
+/* --------------   hero area    ---------------- */
 .intro{
-    margin-top: 5em;
-    padding:10em;
-    height: 60vh;
+    
+    max-width: 80vw;
+    margin:7vw auto;
     display: flex;
     justify-content: space-around;
-    gap: 5em;
+    gap: 4vw;
 }
 
+.img-section{
+    align-self: center;
+    width: 50%;
+}
 .img-section img{
-    height: 100%;
+    width: 100%;
 }
 .text-section{
-    /* margin-top: -6em; */
-    padding: 20px;
+    width: 50%;
 }
 .text-section h2{
-    font-size: 60px;
+    font-size: var(--main-head-font-size);
     color: #14263F;
 }
 .text-section p{
-    font-size: 20px;
+    font-size: var(--para-font-size);
     font-weight: 500;
     color: #666;
-    margin-right: 20px;
-    padding: 1.4em 0;
-    line-height: 2em;
+    margin-right: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    padding: clamp(0.6rem,0.4*2.6vw, 1.5rem) 0;
+    line-height: clamp(0.6rem,0.5*4vw, 2.5rem);
 
 }
 .intro-btn{
-font-size: 20px;
-font-weight: 600;
-margin-top: 2em;
-height: 70px;
-width: 245px;
-border-radius: 10px;
+margin-top: clamp(0.6rem,0.3*4vw, 2rem);
 background: -webkit-linear-gradient(#09BEF8, #0461EA);
 color: #fff;
 border: 0;
 box-shadow: 0 10px 20px #07678755;
 }
 
-
-.service-text{
-    margin-top: -6em;
-    width: 120em;
-    padding: 5.5em 0em 5.5em 5.5em;
-}
 .service-text h2{
-    font-size: 70px;
+    font-size: var(--main-head-font-size);
     color: #14263F;
 }
-
-.services{
-    display: flex;
-    flex-direction: column;
-    margin: -30em 5em 15em 5em;
+.text-section p{
+    font-size: var(--para-font-size);
 }
-.service-wrapper{
-    display: flex;
-    margin: 0 10em;
+/* --------------       service section     -------------- */
+.services{
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
 }
 .service{
-    margin: 5em 4em;
+    width: clamp(10rem, 20vw, 20rem);
+    margin: clamp(0.6rem,0.7*5vw, 5rem);
 }
 .service img{
-    height: 70px;
+    width: 25%;
 }
 .service h3{
-    font-size: 40px;
-    padding: 40px 0;
+    font-size: var(--sub-head-font-size);
+    padding: clamp(0.6rem,0.5*4vw, 2.5rem) 0;
     color: #14263F;
 }
 .service p{
-    font-size: 20px;
+    font-size: var(--para-font-size);
     font-weight: 600;
     color: #999;
-    line-height: 40px;
+    line-height: clamp(0.6rem,0.5*4vw, 2.5rem);
 }
 .cards{
+    width: 100%;
     background: -webkit-linear-gradient(#09BEF8, #0461EA);
 }
 .cards h1{
-    padding-top: 1.5em;
-    font-size: 60px;
+    padding-top: clamp(0.6rem,0.8*2.9vw, 4rem);
+    font-size: var(--main-head-font-size);
     color: #fff;
     text-align: center;
 }
 .cards-wrapper{
     display: flex;
-    padding: 5em 15em;
-    gap: 2em;
+    width: 100%;
+    justify-content: center;
+    overflow: auto;
+    padding: clamp(0.6rem,3.5vw, 5rem) 0;
+    gap: clamp(0.6rem,0.5*4vw, 2.5rem);
 }
 .card{
     background-color: #fff;
-    width: 27em;
+    width: clamp(13rem,5*5vw, 25rem);
     border: 0;
-    border-radius: 20px;
+    border-radius: clamp(0.6rem,0.4*2.6vw, 1.5rem);
     /* padding: 0 20px; */
 }
 .card-top{
-    padding: 3em 0 1em 0em;
+    padding: clamp(0.6rem,0.5*4vw, 2.5rem) 0 clamp(0.6rem,0.4*2.6vw, 1.5rem) 0;
     padding-left:1.2em;
     /* background-color: #666; */
 }
 .active-top{
     background-color: #333;
-    border-radius: 20px 20px 0 0;
+    border-radius: clamp(0.6rem,0.4*2.6vw, 1.5rem) clamp(0.6rem,0.4*2.6vw, 1.5rem) 0 0;
 }
 .active-top h3{
     color: #fff !important;
 }
 .card-top h3{
-    padding-left: 20px;
-    font-size: 38px;
+    padding-left: clamp(0.6rem,0.4*2.6vw, 1.5rem);;
+    font-size: var(--sub-head-font-size);
     color: #14263F;
 }
 .card-top p{
-    padding: 20px 20px;
-    font-size: 20px;
+    padding: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    font-size: var(--para-font-size);
     color: #999;
     font-weight: 600;
 }
 .card-mid {
-    padding-left: 20px;
-    padding-top: 30px;
+    padding-left: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    padding-top: clamp(0.6rem,0.5*4vw, 2.5rem)
 
 }
 .card-mid h5{
     display: flex;
-    gap: 20px;
+    gap: clamp(0.6rem,0.4*2.6vw, 1.5rem);
     align-items: center;
     color: #14263fc0;
-    font-size: 20px;
-    padding: 15px;
+    font-size: var(--para-font-size);
+    padding: clamp(0.6rem,0.4*2.6vw, 1.5rem);
 }
 
 .card-mid img{
-    height: 30px;
+    width: 8%;
 }
 .card-bottom{
     display: flex;
-    margin-top: 5em;
+    margin-top: clamp(0.6rem,3.5vw, 5rem);
     flex-direction: column;
     align-items: center;
 }
 .card-bottom h2{
-    font-size: 40px;
+    font-size: var(--sub-head-font-size);
     color: #14263F;
-    padding:15px 0;
+    padding:clamp(0.6rem,0.4*2.6vw, 1.5rem) 0;
 }
 .card-bottom h2 span{
     color: #999;
 }
 .card-bottom p{
-    font-size: 20px;
+    font-size: var(--para-font-size);
     color: #999;
     font-weight: 600;
 }
 
 .active-card-button{
-    font-size: 20px;
     font-weight: 600;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    height: 70px;
-    width: 245px;
-    border-radius: 10px;
+    margin: clamp(0.6rem,0.5*4vw, 2.5rem) 0;
     background: -webkit-linear-gradient(#09BEF8, #0461EA);
     color: #fff;
     border:0;
 }
 .card-button{
-    font-size: 20px;
     font-weight: 900;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    height: 70px;
-    width: 245px;
-    border-radius: 10px;
+    margin: clamp(0.6rem,0.5*4vw, 2.5rem) 0;
     border: 2px solid  #0f95fb;
     background: -webkit-linear-gradient(#09BEF8, #0461EA);
     -webkit-background-clip: text;
@@ -228,89 +229,101 @@ box-shadow: 0 10px 20px #07678755;
 }
 
 .reviews {
-margin: 10em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:7vw auto;
 }
 .reviews h1 {
-    font-size: 60px;
+    font-size: var(--main-head-font-size);
     color: #14263F;
     text-align: center;
 }
 .reviews>p {
-    font-size: 20px;
+    font-size: var(--para-font-size);
     color: #999;
+    width: 60vw;
     font-weight: 600;
     text-align: center;
-    padding: 40px 22em;
+    padding: clamp(0.6rem,0.5*4vw, 4.5rem) 0;
 }
 .review-wrapper{
     display: flex;
-    gap: 3em;
-    margin-bottom: 1em;
-    padding: 1em 15em;
+    gap: clamp(0.6rem,0.5*4vw, 2.5rem);
+    margin-bottom: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    padding: clamp(0.6rem,0.4*2.6vw, 1.5rem) 0;
 }
 .review {
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 2em;
+    width: 32vw;
+    padding: clamp(0.6rem,0.5*4vw, 2.5rem);
     box-shadow: 0 10px 20px #ddd;
 }
 .review p{
-    font-size: 20px;
+    font-size: var(--para-font-size);
     color:#14263fa7;
     font-weight: 600;
 }
 .author{
     display: flex;
-    margin-top: 35px;
+    align-items: center;
+    margin-top: clamp(0.6rem,0.5*4vw, 2.5rem);
     
 }
 .img{
     background-color: #ddd;
-    height: 100px;
-    width: 100px;
+    height: clamp(0.6rem,6vw, 5rem);
+    width: clamp(0.6rem,6vw, 5rem);
     border-radius: 50px;
 }
 .designation{
-    padding: 20px;
+    padding:clamp(0.6rem,0.4*2.6vw, 1.5rem);
 
 }
 .designation h5{
-    font-size: 20px;
+    font-size:clamp(0.6rem,0.4*2.6vw, 1.5rem);
     color: #14263F;
 }
 .designation p{
-    padding-top: 10px;
-    font-size: 18px;
+    padding-top: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    font-size: var(--para-font-size);
     color: #888;
 }
 .contact {
     display: flex;
-    height: 30em;
+    /* height: 30em; */
     justify-content: center;
     align-items: center;
     background: -webkit-linear-gradient(#09BEF8, #0461EA);
 
 }
 .contact-text{
-    margin-left: 12em;
-    margin-right: 15em;
+    width: 40%;
+    padding: clamp(0.6rem,0.5*4vw, 2.5rem);
+
+     margin-left: clamp(4rem,3*4vw, 14rem);
+    /* margin-right: 15em; */
+}
+.contact-btn{
+    display: flex;
+    justify-content: center;
+    width: 50%;
 }
 .contact h1{
-    font-size: 60px;
+    font-size: var(--main-head-font-size);
     color: #fff;
 }
 .contact p{
-    padding-top: 30px;
-    font-size: 18px;
+    /* padding-top: 30px; */
+    font-size:var(--para-font-size);
+    padding: clamp(0.6rem,0.5*4vw, 2.5rem) 0;
     color: #ffffffb3;
     
 }
 .contact button{
-    font-size: 20px;
+    font-size: var(--para-font-size);
     font-weight: 600;
-    margin: 0em 10em 0em 20em;
-    height: 70px;
-    width: 245px;
     border-radius: 10px;
     background: transparent;
     color: #fff;
@@ -318,43 +331,222 @@ margin: 10em 0;
 }
 
 .footer{
-    margin: 10em 10em 5em 10em;
+    margin: clamp(2rem,2*3vw, 8rem);
     display: flex;
-    gap: 10em;
+    gap: clamp(2rem,2*3vw, 8rem);
 }
 .footer-left img{
-    height: 40px;
+    width:40%;
 }
 .footer-left p{
-    font-size: 18px;
+    font-size: var(--para-font-size);
     color:#999;
-    line-height: 35px;
+    line-height: clamp(0.6rem,0.5*4vw, 2.5rem);
     font-weight: 600;
 }
 
 .footer-mid{
     display: flex;
-    gap: 7em;
+    gap: clamp(2rem,2*3vw, 8rem);
 }
 .foot-wrap h3{
-    font-size: 27px;
+    font-size: clamp(0.6rem,0.3*5vw, 2rem);
     color: #14263F;
 }
 .foot-wrap p{
-    width: 10em;
-    padding-top: 22px;
-    font-size: 17px;
+    width: clamp(4rem,3*4vw, 10rem);
+    padding-top: clamp(0.6rem,0.4*2.6vw, 1.5rem);
+    font-size: var(--para-font-size);
     color:#999;
     font-weight: 500;
 }
 .footer-right h4{
-    font-size: 28px;
+    font-size: clamp(0.6rem,0.3*5vw, 2rem);
     color: #14263F;
 
 }
 .soci-icons{
     margin-top: 1em;
     display: flex;
-    height: 45px;
-    gap: 10px;
+    height: clamp(0.6rem,0.4*6vw, 3rem);
+    gap: clamp(0.2rem,0.4*2.6vw, 0.8rem);
+}
+
+@media screen and (max-width:767px) {
+    nav{
+        justify-content: space-between;
+    }
+    .menu{
+        display: block;
+        width: 1.3rem;
+    }
+    .register button{
+        width: 8rem;
+        height: 2.2rem;
+        font-size: 80%;
+    }
+    nav .logo{
+        width: 20%;
+    }
+    .menu-item:not(:last-child){
+        display: none;
+    }
+    .intro{
+        margin: 5em auto;
+    }
+    .intro:nth-child(even){
+        flex-direction: column;
+    }
+    .intro:nth-child(odd){
+        flex-direction: column-reverse;
+    }
+    .img-section{
+        width: 80%;
+    }
+    .text-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .text-section h2, .service-text h2{
+        text-align: center;
+        font-size: 150%;
+    }
+    .text-section p{
+        text-align: center;
+        font-size: 80%;
+        line-height: 140%;
+    }
+    .btn{
+        margin: auto;
+        font-size: 100%;
+        width: 40%;
+        height: 40px;
+        border-radius: 7px;
+    }
+    .service-text h2,.reviews h1{
+        font-size: 150%;
+        
+    }
+    .services{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70vw;
+    }
+    .service img{
+        width: 17%;
+    }
+    .service h3{
+        font-size: 110%;
+    }
+    .service p
+    ,.reviews>p{
+        text-align: center;
+        font-size: 80%;
+        width: 70%;
+        line-height: 130%;
+    }
+    .card{
+        width: 17em;
+    }
+    .cards h1,.card-bottom h2{
+        font-size: 150%;
+    }
+    .cards-wrapper{
+        align-items: center;
+        flex-direction: column;
+    }
+    .active-top h3,.card-top h3{
+        font-size: 110%;
+    }
+    .card-top p,.card-bottom p{
+        font-size: 80%;
+    }
+    .card-mid h5{
+        font-size: 80%;
+
+    }
+    .card-button ,.active-card-button{
+        margin: 2em 0;
+    }
+    .review-wrapper{
+        flex-direction: column;
+    }
+    .review{
+        width: 70vw;
+    }
+    .review p{
+        padding: 5px;
+        font-size: 85%;
+    }
+    .designation h5{
+        font-size: 100%;
+    }
+    .contact{
+        padding-bottom: 2rem;
+        flex-direction: column;
+    }
+    .contact-text{
+        width: 100%;
+        padding: 1em auto;
+        margin: 0;
+    }
+    .contact-text h1{
+        margin: 1em 2em;
+        font-size: 150%;
+        text-align: center;
+    }
+    .contact-text p{
+        margin: 1em 2em;
+        font-size: 110%;
+        text-align: center;
+    }
+    .contact button{
+        font-size: 1rem;
+        width: 12rem;
+    }
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer-left{
+        flex:2;
+    }
+    .footer-left img{
+        width: 30%;
+    }
+    .footer-mid{
+        width: 100%;
+        order: -1;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .foot-wrap h3,
+    .footer-right h4{
+        font-size: 90%;
+    }
+    .foot-wrap p{
+        font-size: 80%;
+        width: 5rem;
+    }
+    .footer-right{
+        flex: 1;
+    }
+    .footer-left p{
+        font-size: 70%;
+        line-height: 130%;
+    }
+    .footer-right h4{
+        text-align: center;
+    }
+    .soci-icons{
+        height: 1.7rem;
+    }
 }
