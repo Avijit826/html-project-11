@@ -421,7 +421,7 @@ box-shadow: 0 10px 20px #07678755;
     .btn{
         margin: auto;
         font-size: 100%;
-        width: 40%;
+        width: 10rem;
         height: 40px;
         border-radius: 7px;
     }
@@ -454,6 +454,9 @@ box-shadow: 0 10px 20px #07678755;
         width: 70%;
         line-height: 130%;
     }
+    .cards h1{
+        padding: 1rem;
+    }
     .card{
         width: 17em;
     }
@@ -465,6 +468,7 @@ box-shadow: 0 10px 20px #07678755;
         flex-direction: column;
     }
     .active-top h3,.card-top h3{
+        padding-top: 1rem;
         font-size: 110%;
     }
     .card-top p,.card-bottom p{
