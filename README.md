@@ -77,3 +77,9 @@ Open project folder
 <!-- AUTHOR -->
 
 ## 👤 Find Me <a name="author"></a>
+
+- [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Avijit826)
+- [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/avijitdas826)
+- [![Hashnode](https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://avicreation.hashnode.dev)
+
+## <p align="right"><a href="#readme-top">⬆️</a></p>
